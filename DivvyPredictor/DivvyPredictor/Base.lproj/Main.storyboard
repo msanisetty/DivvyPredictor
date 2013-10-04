@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Destination View Controller-->
         <scene sceneID="gF7-JS-7iT">
             <objects>
-                <viewController id="VWb-nf-tyE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DPMapViewDestinationViewControllerID" id="VWb-nf-tyE" customClass="DPMapViewDestinationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2TF-PF-Wfg"/>
                         <viewControllerLayoutGuide type="bottom" id="jj9-vt-B3w"/>
@@ -15,13 +15,29 @@
                     <view key="view" contentMode="scaleToFill" id="0ad-Ot-uUF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izm-RO-szh" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="63" width="320" height="505"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Destionation Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsR-tQ-6AD">
+                                <rect key="frame" x="0.0" y="65" width="320" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="PPe-bL-VHm"/>
+                    <connections>
+                        <outlet property="destinationAddressTextField" destination="rsR-tQ-6AD" id="qij-vF-Jho"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1zb-Ix-Ejg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1264" y="-140"/>
+            <point key="canvasLocation" x="1300" y="46"/>
         </scene>
         <!--Map View Controller - Divvy-->
         <scene sceneID="ufC-wZ-h7g">
@@ -40,24 +56,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AeB-tv-rDg">
-                                <rect key="frame" x="0.0" y="65" width="320" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Select a Destination">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="VWb-nf-tyE" kind="push" id="Ynq-cE-cGh"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Divvy" id="iBa-M6-MAV"/>
                     <connections>
                         <outlet property="googleMapView" destination="srh-Bp-W0I" id="cbf-Su-0sy"/>
-                        <outlet property="selectDestinationButton" destination="AeB-tv-rDg" id="J98-VF-ekh"/>
+                        <segue destination="VWb-nf-tyE" kind="push" identifier="DestinationSegueID" id="rw8-sv-bYg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

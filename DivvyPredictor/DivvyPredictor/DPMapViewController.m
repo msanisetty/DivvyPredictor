@@ -165,4 +165,8 @@
     infoWindow.disctanceToStation.text = [NSString stringWithFormat:@"%.2f", bikeStation.distanceToBikeStationFromCurrentLocation];
     return infoWindow;
 }
+
+- (void)mapView:(GMSMapView *)mapView didTapInfoWindowOfMarker:(GMSMarker *)marker {
+    [self performSegueWithIdentifier:@"DestinationSegueID" sender:(DPBikeStation *)marker.userData];
+}
 @end

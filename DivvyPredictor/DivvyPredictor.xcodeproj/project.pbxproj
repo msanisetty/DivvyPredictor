@@ -52,6 +52,8 @@
 		735B14AD17FE8B5700DC611E /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 735B14AC17FE8B5700DC611E /* UIView+Utils.m */; };
 		735B14B017FE9AFC00DC611E /* navigationBarBackgroundRetro.png in Resources */ = {isa = PBXBuildFile; fileRef = 735B14AE17FE9AFC00DC611E /* navigationBarBackgroundRetro.png */; };
 		735B14B117FE9AFC00DC611E /* navigationBarBackgroundRetro@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 735B14AF17FE9AFC00DC611E /* navigationBarBackgroundRetro@2x.png */; };
+		735B14CC17FF221F00DC611E /* DPMapViewDestinationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 735B14CB17FF221F00DC611E /* DPMapViewDestinationViewController.m */; };
+		735B14DF17FF299400DC611E /* DCAddressSearchResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 735B14DE17FF299400DC611E /* DCAddressSearchResults.m */; };
 		83EFAA7C0BC949C99E73A4F0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC38900F59F24241ACD5C214 /* libPods.a */; };
 		C9B6726617FE8BD600A41077 /* GTLPredictionAnalyze.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B6725817FE8BD600A41077 /* GTLPredictionAnalyze.m */; };
 		C9B6726717FE8BD600A41077 /* GTLPredictionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B6725A17FE8BD600A41077 /* GTLPredictionConstants.m */; };
@@ -200,6 +202,10 @@
 		735B14AC17FE8B5700DC611E /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Utils.m"; path = "Utils/UIView+Utils.m"; sourceTree = "<group>"; };
 		735B14AE17FE9AFC00DC611E /* navigationBarBackgroundRetro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationBarBackgroundRetro.png; sourceTree = "<group>"; };
 		735B14AF17FE9AFC00DC611E /* navigationBarBackgroundRetro@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationBarBackgroundRetro@2x.png"; sourceTree = "<group>"; };
+		735B14CA17FF221F00DC611E /* DPMapViewDestinationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPMapViewDestinationViewController.h; sourceTree = "<group>"; };
+		735B14CB17FF221F00DC611E /* DPMapViewDestinationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPMapViewDestinationViewController.m; sourceTree = "<group>"; };
+		735B14DD17FF299400DC611E /* DCAddressSearchResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAddressSearchResults.h; sourceTree = "<group>"; };
+		735B14DE17FF299400DC611E /* DCAddressSearchResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCAddressSearchResults.m; sourceTree = "<group>"; };
 		AC38900F59F24241ACD5C214 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B6723517FE8AE800A41077 /* GTLBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLBase64.h; sourceTree = "<group>"; };
 		C9B6723617FE8AE800A41077 /* GTLBatchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLBatchQuery.h; sourceTree = "<group>"; };
@@ -311,6 +317,8 @@
 		158E2ADD17FE494E00CD8F9F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				735B14DD17FF299400DC611E /* DCAddressSearchResults.h */,
+				735B14DE17FF299400DC611E /* DCAddressSearchResults.m */,
 				158E2ADE17FE497900CD8F9F /* DPBikeStation.h */,
 				158E2ADF17FE497900CD8F9F /* DPBikeStation.m */,
 				158E2AE117FE499900CD8F9F /* DPBikeStationsList.h */,
@@ -395,6 +403,8 @@
 				735B143D17FE2C9B00DC611E /* DPAppDelegate.m */,
 				735B144217FE2C9B00DC611E /* DPMapViewController.h */,
 				735B144317FE2C9B00DC611E /* DPMapViewController.m */,
+				735B14CA17FF221F00DC611E /* DPMapViewDestinationViewController.h */,
+				735B14CB17FF221F00DC611E /* DPMapViewDestinationViewController.m */,
 				158E2AD917FE475300CD8F9F /* External Libraries */,
 				735B144517FE2C9B00DC611E /* Images.xcassets */,
 				735B143F17FE2C9B00DC611E /* Main.storyboard */,
@@ -780,7 +790,9 @@
 				735B148C17FE5DDA00DC611E /* GMSMarkerOptions+MarkerType.m in Sources */,
 				C9B6726917FE8BD600A41077 /* GTLPredictionList.m in Sources */,
 				C9B6726717FE8BD600A41077 /* GTLPredictionConstants.m in Sources */,
+				735B14DF17FF299400DC611E /* DCAddressSearchResults.m in Sources */,
 				C9B6726817FE8BD600A41077 /* GTLPredictionInsert2.m in Sources */,
+				735B14CC17FF221F00DC611E /* DPMapViewDestinationViewController.m in Sources */,
 				158E2AE317FE499900CD8F9F /* DPBikeStationsList.m in Sources */,
 				735B144417FE2C9B00DC611E /* DPMapViewController.m in Sources */,
 				735B14A817FE8A3D00DC611E /* DPGoogleMapsInfoWindow.m in Sources */,
